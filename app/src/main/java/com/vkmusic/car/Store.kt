@@ -56,7 +56,7 @@ class Store(ctx: Context) {
         p.edit().remove("token").remove("uid").apply()
     }
 
-    fun setUpdateUrl(u: String) {
+    fun saveUpdateUrl(u: String) {
         updateUrl = u
         p.edit().putString("update_url", u).apply()
     }
