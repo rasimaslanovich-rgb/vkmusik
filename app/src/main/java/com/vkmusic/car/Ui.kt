@@ -586,7 +586,7 @@ fun SettingsScreen(app: App) {
             SettingsCard(Modifier.weight(1f).fillMaxSize(), "Обновление приложения") {
                 Text("Установлена версия: ${Updater.installedName(ctx)}", fontSize = 21.sp, color = Ink)
                 OutlinedTextField(
-                    value = app.store.updateUrl, onValueChange = { app.store.setUpdateUrl(it) },
+                    value = app.store.updateUrl, onValueChange = { app.store.saveUpdateUrl(it) },
                     label = { Text("Ссылка на version.json в облаке") }, singleLine = true, modifier = Modifier.fillMaxWidth()
                 )
                 Button(onClick = {
