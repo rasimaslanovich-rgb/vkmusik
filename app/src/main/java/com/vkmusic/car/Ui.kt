@@ -140,9 +140,11 @@ fun LoginFlow(app: App) {
                 )
                 Button(
                     onClick = { web = true },
+                
                     modifier = Modifier.fillMaxWidth().height(72.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2787F5), contentColor = Color.White)
                 ) { Text("Войти через ВКонтакте", fontSize = 26.sp, fontWeight = FontWeight.Bold) }
+                TokenLogin(app)
                 Text("Данные входа хранятся только на устройстве", fontSize = 17.sp, color = Muted,
                     modifier = Modifier.padding(top = 16.dp))
             }
